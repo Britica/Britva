@@ -14,6 +14,13 @@ from TwitchChannelPointsMiner.classes.entities.Bet import Strategy, BetSettings,
 from TwitchChannelPointsMiner.classes.entities.Streamer import Streamer, StreamerSettings
 from keep_alive import keep_alive
 import os
+from datetime import datetime
+
+time_data = '2024-06-10T23:59:59.997Z'
+time_data_truncated = time_data.split('.')[0] + 'Z'
+parsed_time = datetime.strptime(time_data_truncated, '%Y-%m-%dT%H:%M:%SZ')
+
+print(parsed_time)
 
 keep_alive()
 
